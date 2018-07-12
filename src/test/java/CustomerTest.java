@@ -6,7 +6,6 @@ import static org.junit.Assert.assertEquals;
 
 public class CustomerTest {
     private Customer deepanshu;
-    private static final double DELTA = 0.10;
     private Movie frozen;
     private Movie savingPrivateRyan;
     private Movie loveSimon;
