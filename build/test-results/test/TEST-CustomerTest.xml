@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CustomerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-12T18:07:21" hostname="admins-MacBook-Pro-2.local" time="0.003">
+  <properties/>
+  <testcase name="statementForRentalOfTwoMovies" classname="CustomerTest" time="0.0"/>
+  <testcase name="statementForRentalOfThreeMovies" classname="CustomerTest" time="0.002"/>
+  <system-out><![CDATA[Rental record for Deepanshu
+	Love Simon	6.0
+	Frozen	1.5
+	Saving Private Ryan	6.5
+Amount owed is 14.0
+You earned 4 frequent renter points]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
