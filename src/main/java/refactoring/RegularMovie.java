@@ -1,6 +1,6 @@
 package refactoring;
 
-public class RegularMovie extends Movie{
+public class RegularMovie extends Movie {
     private static final double DAYS_THRESHOLD = 2;
     private static final double REGULAR_PRICE = 2;
     private static final double EXTRA_DAYS_PRICE_FACTOR = 1.5;

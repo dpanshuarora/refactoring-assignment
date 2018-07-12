@@ -21,7 +21,7 @@ public class Customer {
     }
 
     public String generateStatement() {
-        int frequentRenterPoints =0;
+        int frequentRenterPoints = 0;
         double totalAmount = 0;
         StringBuilder statement = new StringBuilder();
         StringBuilder amountForThisRental = new StringBuilder();

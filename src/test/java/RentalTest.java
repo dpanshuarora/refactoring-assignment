@@ -1,6 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
-import refactoring.*;
+import refactoring.Movie;
+import refactoring.NewReleaseMovie;
+import refactoring.RegularMovie;
+import refactoring.Rental;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,11 +30,11 @@ public class RentalTest {
 
     @Test
     public void frequentRenterPointsUpdatesCorrectly() {
-        assertEquals(3, theRockyHorroPictureShowRental.updateFrequentRenterPoints(2),0.1);
+        assertEquals(3, theRockyHorroPictureShowRental.updateFrequentRenterPoints(2), 0.1);
     }
 
     @Test
     public void ShouldCalculateCorrectAmount() {
-        assertEquals(6, loveSimon.calculateAmount(2),0.1);
+        assertEquals(6, loveSimon.calculateAmount(2), 0.1);
     }
 }
