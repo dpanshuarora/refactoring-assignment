@@ -20,6 +20,11 @@ public class Rental {
 
     public int updateFrequentRenterPoints(int frequentRenterPoints) {
         frequentRenterPoints++;
+        frequentRenterPoints = addBonusPointsIfNewReleaseMovieRentedForMoreThanADay(frequentRenterPoints);
+        return frequentRenterPoints;
+    }
+
+    private int addBonusPointsIfNewReleaseMovieRentedForMoreThanADay(int frequentRenterPoints) {
         if (movie instanceof NewReleaseMovie && daysRented > 1)
             frequentRenterPoints++;
         return frequentRenterPoints;
