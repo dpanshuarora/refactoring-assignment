@@ -1,0 +1,32 @@
+import org.junit.Before;
+import org.junit.Test;
+import refactoring.*;
+
+import static org.junit.Assert.assertEquals;
+
+public class RentalTest {
+    private Movie loveSimon;
+    private Movie theRockyHorroPictureShow;
+
+    private Rental loveSimonRental;
+    private Rental theRockyHorroPictureShowRental;
+
+    @Before
+    public void setUp() {
+        loveSimon = new NewReleaseMovie("Love Simon");
+        theRockyHorroPictureShow = new RegularMovie("The Rocky Horror Picture Show");
+
+        loveSimonRental = new Rental(loveSimon, 2);
+        theRockyHorroPictureShowRental = new Rental(theRockyHorroPictureShow, 4);
+    }
+
+    @Test
+    public void frequentRenterPointsUpdatesCorrectlyWithNewReleaseMovieRentedForMoreThanADay() {
+        assertEquals(4, loveSimonRental.updateFrequentRenterPoints(2), 0.1);
+    }
+
+    @Test
+    public void frequentRenterPointsUpdatesCorrectly() {
+        assertEquals(3, theRockyHorroPictureShowRental.updateFrequentRenterPoints(2),0.1);
+    }
+}

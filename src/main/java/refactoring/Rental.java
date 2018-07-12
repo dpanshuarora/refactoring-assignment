@@ -20,7 +20,7 @@ public class Rental {
 
     public int updateFrequentRenterPoints(int frequentRenterPoints) {
         frequentRenterPoints++;
-        if (getMovie() instanceof NewReleaseMovie && daysRented > 1)
+        if (movie instanceof NewReleaseMovie && daysRented > 1)
             frequentRenterPoints++;
         return frequentRenterPoints;
     }
