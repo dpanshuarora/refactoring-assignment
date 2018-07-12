@@ -29,4 +29,9 @@ public class RentalTest {
     public void frequentRenterPointsUpdatesCorrectly() {
         assertEquals(3, theRockyHorroPictureShowRental.updateFrequentRenterPoints(2),0.1);
     }
+
+    @Test
+    public void ShouldCalculateCorrectAmount() {
+        assertEquals(6, loveSimon.calculateAmount(2),0.1);
+    }
 }
