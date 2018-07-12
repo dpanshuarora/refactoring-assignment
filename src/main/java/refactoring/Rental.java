@@ -14,8 +14,8 @@ public class Rental {
         return movie;
     }
 
-    public int getDaysRented() {
-        return daysRented;
+    public double calculateAmount() {
+        return movie.calculateAmount(daysRented);
     }
 
     public int updateFrequentRenterPoints(int frequentRenterPoints) {

@@ -35,7 +35,7 @@ public class CustomerTest {
                 "\tLove Simon\t6.0\n" +
                 "\tSaving Private Ryan\t6.5\n" +
                 "Amount owed is 12.5\n" +
-                "You earned 3 frequent renter points", deepanshu.statement());
+                "You earned 3 frequent renter points", deepanshu.generateStatement());
     }
 
     @Test
@@ -43,12 +43,12 @@ public class CustomerTest {
         deepanshu.addRental(loveSimonRental);
         deepanshu.addRental(frozenRental);
         deepanshu.addRental(savingPrivateRyanRental);
-        System.out.print(deepanshu.statement());
+        System.out.print(deepanshu.generateStatement());
         assertEquals("Rental record for Deepanshu\n" +
                 "\tLove Simon\t6.0\n" +
                 "\tFrozen\t1.5\n" +
                 "\tSaving Private Ryan\t6.5\n" +
                 "Amount owed is 14.0\n" +
-                "You earned 4 frequent renter points", deepanshu.statement());
+                "You earned 4 frequent renter points", deepanshu.generateStatement());
     }
 }

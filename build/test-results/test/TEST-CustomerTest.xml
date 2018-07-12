@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CustomerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-12T19:16:21" hostname="admins-MacBook-Pro-2.local" time="0.003">
+<testsuite name="CustomerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-12T19:30:21" hostname="admins-MacBook-Pro-2.local" time="0.004">
   <properties/>
-  <testcase name="statementForRentalOfTwoMovies" classname="CustomerTest" time="0.0"/>
+  <testcase name="statementForRentalOfTwoMovies" classname="CustomerTest" time="0.001"/>
   <testcase name="statementForRentalOfThreeMovies" classname="CustomerTest" time="0.003"/>
   <system-out><![CDATA[Rental record for Deepanshu
 	Love Simon	6.0
