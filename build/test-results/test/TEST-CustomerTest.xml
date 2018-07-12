@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CustomerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-12T18:19:12" hostname="admins-MacBook-Pro-2.local" time="0.005">
+<testsuite name="CustomerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-12T18:33:46" hostname="admins-MacBook-Pro-2.local" time="0.004">
   <properties/>
-  <testcase name="statementForRentalOfTwoMovies" classname="CustomerTest" time="0.002"/>
-  <testcase name="statementForRentalOfThreeMovies" classname="CustomerTest" time="0.003"/>
+  <testcase name="statementForRentalOfTwoMovies" classname="CustomerTest" time="0.001"/>
+  <testcase name="statementForRentalOfThreeMovies" classname="CustomerTest" time="0.002"/>
   <system-out><![CDATA[Rental record for Deepanshu
 	Love Simon	6.0
 	Frozen	1.5

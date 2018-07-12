@@ -1,8 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import refactoring.Customer;
-import refactoring.Movie;
-import refactoring.Rental;
+import refactoring.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -19,9 +17,9 @@ public class CustomerTest {
     @Before
     public void setUp() {
         deepanshu = new Customer("Deepanshu");
-        frozen = new Movie("Frozen", 2);
-        savingPrivateRyan = new Movie("Saving Private Ryan", 0);
-        loveSimon = new Movie("Love Simon", 1);
+        frozen = new ChildrenMovie("Frozen");
+        savingPrivateRyan = new RegularMovie("Saving Private Ryan");
+        loveSimon = new NewReleaseMovie("Love Simon");
 
         loveSimonRental = new Rental(loveSimon, 2);
         frozenRental = new Rental(frozen, 3);
