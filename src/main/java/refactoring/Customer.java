@@ -20,19 +20,17 @@ public class Customer {
         int frequentRenterPoints = 0;
         double totalAmount = 0;
         StringBuilder statement = new StringBuilder();
-        StringBuilder amountForThisRental = new StringBuilder();
 
         statement.append("Rental record for " + name + "\n");
         for (Rental rental : rentals) {
             double amount = rental.calculateAmount();
 
             frequentRenterPoints = rental.updateFrequentRenterPoints(frequentRenterPoints);
-            amountForThisRental.append("\t" + rental.getMovieTitle() + "\t" + amount + "\n");
+            statement.append(rental.generateStatementForThisRental());
             totalAmount += amount;
         }
 
-        statement.append(amountForThisRental +
-                "Amount owed is " + totalAmount + "\n" +
+        statement.append("Amount owed is " + totalAmount + "\n" +
                 "You earned " + frequentRenterPoints + " frequent renter points");
 
         return statement.toString();

@@ -10,7 +10,7 @@ public class Rental {
         this.daysRented = daysRented;
     }
 
-    public String getMovieTitle() {
+    private String getMovieTitle() {
         return movie.getTitle();
     }
 
@@ -28,6 +28,10 @@ public class Rental {
         if (movie instanceof NewReleaseMovie && daysRented > 1)
             frequentRenterPoints++;
         return frequentRenterPoints;
+    }
+
+    public String generateStatementForThisRental() {
+        return ("\t" + getMovieTitle() + "\t" + calculateAmount() + "\n");
     }
 
 }
