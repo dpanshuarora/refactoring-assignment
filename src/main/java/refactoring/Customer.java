@@ -27,7 +27,7 @@ public class Customer {
             double amount = rental.calculateAmount();
 
             frequentRenterPoints = rental.updateFrequentRenterPoints(frequentRenterPoints);
-            amountForThisRental.append("\t" + rental.getMovie().getTitle() + "\t" + amount + "\n");
+            amountForThisRental.append("\t" + rental.getMovieTitle() + "\t" + amount + "\n");
             totalAmount += amount;
         }
 
