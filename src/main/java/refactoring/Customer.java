@@ -17,23 +17,25 @@ public class Customer {
     }
 
     public String generateStatement() {
-        int frequentRenterPoints = 0;
-        double totalAmount = 0;
         StringBuilder statement = new StringBuilder();
-
         statement.append("Rental record for " + name + "\n");
-        for (Rental rental : rentals) {
-            double amount = rental.calculateAmount();
-
-            frequentRenterPoints += rental.updateFrequentRenterPoints();
-            statement.append(rental.generateStatementForThisRental());
-            totalAmount += amount;
-        }
-
-        statement.append("Amount owed is " + totalAmount + "\n" +
-                "You earned " + frequentRenterPoints + " frequent renter points");
+        rentals.stream().map(Rental::generateStatementForThisRental).forEach(statement::append);
+        statement.append("Amount owed is " + calculateTotalAmount() + "\n" +
+                "You earned " + calculateFrequentRenterPointsForAllRentals() + " frequent renter points");
 
         return statement.toString();
+    }
+
+    private int calculateFrequentRenterPointsForAllRentals() {
+        return rentals.stream()
+                .mapToInt(Rental::updateFrequentRenterPoints)
+                .sum();
+    }
+
+    private double calculateTotalAmount() {
+        return rentals.stream()
+                .mapToDouble(Rental::calculateAmount)
+                .sum();
     }
 
 }
