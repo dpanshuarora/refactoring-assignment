@@ -18,16 +18,15 @@ public class Rental {
         return movie.calculateAmount(daysRented);
     }
 
-    public int updateFrequentRenterPoints(int frequentRenterPoints) {
-        frequentRenterPoints++;
-        frequentRenterPoints = addBonusPointsIfNewReleaseMovieRentedForMoreThanADay(frequentRenterPoints);
-        return frequentRenterPoints;
+    public int updateFrequentRenterPoints() {
+        if(newReleaseMovieRentedForMoreThanADay())
+            return 2;
+        else
+            return 1;
     }
 
-    private int addBonusPointsIfNewReleaseMovieRentedForMoreThanADay(int frequentRenterPoints) {
-        if (movie instanceof NewReleaseMovie && daysRented > 1)
-            frequentRenterPoints++;
-        return frequentRenterPoints;
+    private boolean newReleaseMovieRentedForMoreThanADay() {
+        return movie instanceof NewReleaseMovie && daysRented > 1;
     }
 
     public String generateStatementForThisRental() {

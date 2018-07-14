@@ -25,7 +25,7 @@ public class Customer {
         for (Rental rental : rentals) {
             double amount = rental.calculateAmount();
 
-            frequentRenterPoints = rental.updateFrequentRenterPoints(frequentRenterPoints);
+            frequentRenterPoints += rental.updateFrequentRenterPoints();
             statement.append(rental.generateStatementForThisRental());
             totalAmount += amount;
         }
@@ -35,4 +35,5 @@ public class Customer {
 
         return statement.toString();
     }
+
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MovieTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-07-12T20:07:04" hostname="admins-MacBook-Pro-2.local" time="0.001">
+<testsuite name="MovieTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-07-14T07:46:44" hostname="admins-MacBook-Pro-2.local" time="0.001">
   <properties/>
-  <testcase name="calculateAmountWhenChildrenMovieRentedForLessThanThreeDays" classname="MovieTest" time="0.001"/>
+  <testcase name="calculateAmountWhenChildrenMovieRentedForLessThanThreeDays" classname="MovieTest" time="0.0"/>
   <testcase name="calculateAmountWhenRegularMovieRentedForMoreThanTwoDays" classname="MovieTest" time="0.0"/>
   <testcase name="calculateAmountWhenRegularMovieRentedForLessThanTwoDays" classname="MovieTest" time="0.0"/>
   <testcase name="calculateAmountWhenChildrenMovieRentedForMoreThanThreeDays" classname="MovieTest" time="0.0"/>
