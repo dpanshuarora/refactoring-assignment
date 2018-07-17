@@ -25,12 +25,12 @@ public class RentalTest {
 
     @Test
     public void frequentRenterPointsUpdatesCorrectlyWithNewReleaseMovieRentedForMoreThanADay() {
-        assertEquals(2, loveSimonRental.updateFrequentRenterPoints(), 0.1);
+        assertEquals(2, loveSimonRental.calculateFrequentRenterPoints(), 0.1);
     }
 
     @Test
     public void frequentRenterPointsUpdatesCorrectly() {
-        assertEquals(1, theRockyHorroPictureShowRental.updateFrequentRenterPoints(), 0.1);
+        assertEquals(1, theRockyHorroPictureShowRental.calculateFrequentRenterPoints(), 0.1);
     }
 
     @Test

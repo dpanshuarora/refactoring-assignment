@@ -18,7 +18,7 @@ public class Rental {
         return movie.calculateAmount(daysRented);
     }
 
-    public int updateFrequentRenterPoints() {
+    public int calculateFrequentRenterPoints() {
         if(newReleaseMovieRentedForMoreThanADay())
             return 2;
         else

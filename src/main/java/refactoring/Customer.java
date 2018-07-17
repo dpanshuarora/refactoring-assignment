@@ -6,7 +6,7 @@ import java.util.List;
 public class Customer {
 
     private String name;
-    private List<Rental> rentals = new ArrayList<Rental>();
+    private List<Rental> rentals = new ArrayList<>();
 
     public Customer(String name) {
         this.name = name;
@@ -17,18 +17,25 @@ public class Customer {
     }
 
     public String generateStatement() {
-        StringBuilder statement = new StringBuilder();
-        statement.append("Rental record for " + name + "\n");
-        rentals.stream().map(Rental::generateStatementForThisRental).forEach(statement::append);
-        statement.append("Amount owed is " + calculateTotalAmount() + "\n" +
-                "You earned " + calculateFrequentRenterPointsForAllRentals() + " frequent renter points");
+        String statement = "Rental record for " + name + "\n";
+        statement += generateStatementsForAllRentals();
+        statement += "Amount owed is " + calculateTotalAmount() + "\n" +
+                "You earned " + calculateFrequentRenterPointsForAllRentals() + " frequent renter points";
 
-        return statement.toString();
+        return statement;
+    }
+
+    private String generateStatementsForAllRentals() {
+        StringBuilder statementsForAllRentals = new StringBuilder();
+        rentals.stream()
+                .map(Rental::generateStatementForThisRental)
+                .forEach(statementsForAllRentals::append);
+        return statementsForAllRentals.toString();
     }
 
     private int calculateFrequentRenterPointsForAllRentals() {
         return rentals.stream()
-                .mapToInt(Rental::updateFrequentRenterPoints)
+                .mapToInt(Rental::calculateFrequentRenterPoints)
                 .sum();
     }
 
