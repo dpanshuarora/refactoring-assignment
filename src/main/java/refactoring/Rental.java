@@ -19,7 +19,7 @@ public class Rental {
     }
 
     public int calculateFrequentRenterPoints() {
-        if(newReleaseMovieRentedForMoreThanADay())
+        if (newReleaseMovieRentedForMoreThanADay())
             return 2;
         else
             return 1;

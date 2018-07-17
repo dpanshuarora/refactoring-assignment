@@ -10,7 +10,6 @@ import static org.junit.Assert.assertEquals;
 public class RentalTest {
     private Movie loveSimon;
     private Movie theRockyHorroPictureShow;
-
     private Rental loveSimonRental;
     private Rental theRockyHorroPictureShowRental;
 
